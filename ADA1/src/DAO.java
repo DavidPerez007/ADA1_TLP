@@ -12,30 +12,32 @@ public class DAO {
 
     public DAO(String infixPath) {
         this.infixPath = infixPath;
-        this.postfixPath = "files\\postfix.txt";
+        this.postfixPath = "ADA1\\files\\postfix_exp.txt";
     }
 
-    public void readFile() {
+    public ArrayList readFile() {
+        String expression;
+        ArrayList postfixArray = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(this.infixPath))) {
-            String expression;
-            ArrayList postfixArray = new ArrayList<>();
-
             while ((expression = reader.readLine()) != null) {
-                InfixToPostfix conversor = new InfixToPostfix();
-                String postfixExpression = conversor.infixToPostfix(expression);
-                postfixArray.add(postfixExpression);
+                // Conversor conversor = new Conversor();
+                // String postfixExpression = conversor.infixToPostfix(expression);
+                postfixArray.add(expression);
             }
 
-            writeFile(postfixArray);
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return postfixArray;
+
     }
 
-    public void writeFile(ArrayList postfixEpression) {
+    public void writeFile(ArrayList postfixExpression) {
+        ArrayList answer;
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(this.postfixPath, false))) {
-            for(int i = 0; i < postfixEpression.size(); i++){
-                writer.write(postfixEpression.get(i).toString());
+            for(int i = 0; i < postfixExpression.size(); i++){
+                answer = (ArrayList) postfixExpression.get(i);
+                writer.write(answer.get(0).toString() + " resultado: " + answer.get(1).toString());
                 writer.newLine();
             }
             

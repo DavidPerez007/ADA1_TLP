@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class Conversor {
 
-    public String infixToPostfix(String infix) {
+    public static String infixToPostfix(String infix) {
         Stack<Character> stack = new Stack<>();
         StringBuilder postfix = new StringBuilder();
         for (int i = 0; i < infix.length(); i++) {

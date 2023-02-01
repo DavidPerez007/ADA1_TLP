@@ -1,14 +1,14 @@
 import java.util.Stack;
 
 public class Calculator {
-    public static int evaluate(String expression) {
-        Stack<Integer> stack = new Stack<>();
+    public static float evaluate(String expression) {
+        Stack<Float> stack = new Stack<>();
         for (char c : expression.toCharArray()) {
             if (Character.isDigit(c)) {
-                stack.push(Character.getNumericValue(c));
+                stack.push((float) Character.getNumericValue(c));
             } else {
-                int a = stack.pop();
-                int b = stack.pop();
+                Float a = stack.pop();
+                Float b = stack.pop();
                 switch (c) {
                     case '+':
                         stack.push(b + a);
