@@ -33,7 +33,7 @@ public class Conversor {
     }
 
     private static boolean isOperator(char c) {
-        ArrayList<Character> operators = new ArrayList<Character>(Arrays.asList('+', '-', '*', '/', '(', ')'));
+        ArrayList<Character> operators = new ArrayList<Character>(Arrays.asList('+', '-', '*', '^', '/', '(', ')'));
         return operators.contains(c);
     }
 

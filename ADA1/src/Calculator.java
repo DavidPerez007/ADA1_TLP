@@ -22,6 +22,9 @@ public class Calculator {
                     case '/':
                         stack.push(b / a);
                         break;
+                    case '^':
+                        stack.push((float) Math.pow(b, a));
+                        break;
                 }
             }
         }

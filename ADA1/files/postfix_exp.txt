@@ -1,0 +1,6 @@
+68/7*1+ resultado: 6.25
+58/9*1+ resultado: 6.625
+89*7/ resultado: 10.285714
+9628*+* resultado: 198.0
+24+7*395-*+ resultado: 54.0
+462^+ resultado: 40.0

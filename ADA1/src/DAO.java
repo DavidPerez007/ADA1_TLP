@@ -12,7 +12,7 @@ public class DAO {
 
     public DAO(String infixPath) {
         this.infixPath = infixPath;
-        this.postfixPath = "ADA1\\files\\postfix_exp.txt";
+        this.postfixPath = "ADA01_Stack\\ADA1\\files\\postfix_exp.txt";
     }
 
     public ArrayList readFile() {
