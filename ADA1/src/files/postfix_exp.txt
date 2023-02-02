@@ -1,0 +1,2 @@
+97+7/5* resultado: 11.428572
+55+ resultado: 10.0
