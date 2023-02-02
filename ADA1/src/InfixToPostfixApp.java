@@ -2,14 +2,11 @@ import java.util.ArrayList;
 
 public class InfixToPostfixApp {
     public static void main(String[] args) {
-        String infixPath = "ADA01_Stack\\ADA1\\files\\infix_exp.txt";
+        String infixPath = args[0];
         DAO dao = new DAO(infixPath);
         ArrayList infixExpressions = dao.readFile();
         ArrayList postfixExpressions = transformToPostfix(infixExpressions);
-        
-        
         dao.writeFile(postfixExpressions);
-
     }
 
     public static ArrayList transformToPostfix(ArrayList infixExpressions){
